@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Overpass", serif;
+}
+
+:root {
+    --Orange: hsl(25, 97%, 53%);
+    --Light-Grey: hsl(217deg 20.9% 25.01%);
+    --Dark-Blue: hsl(213, 19%, 18%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+body {
+    background-color: var(--Very-Dark-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--Dark-Blue);
+    max-width: 350px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    color: #fff;
+
+}
+
+.container #icon-star {
+    border-radius: 50%;
+    padding: 15px;
+    background-color: var(--Light-Grey);
+    transition: .5s;
+}
+
+.container #icon-star:hover {
+    scale: 1.1;
+}
+
+.container .before h2 {
+    font-size: 30px;
+    margin: 15px 0 20px;
+}
+
+.container .before p {
+    font-size: 15px;
+    font-weight: 300;
+    color: hsl(217, 12%, 63%);
+}
+
+.container .before form {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.container .before label {
+    background-color: var(--Light-Grey);
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.container .before input {
+    appearance: none;
+    width: 40px;
+    height: 40px;
+}
+
+.container .before input[type="radio"]:checked+label {
+    background-color: #fff !important;
+    color: var(--Dark-Blue);
+}
+
+.container .before label:hover {
+    background-color: var(--Orange);
+    color: var(--Dark-Blue);
+}
+
+
+.container .before #btn {
+    width: 100%;
+    background-color: var(--Orange);
+    color: var(--Dark-Blue);
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 0;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.container .before #btn:hover {
+    background-color: #fff;
+}
+
+.thank-you {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you img {
+    margin-bottom: 30px;
+}
+
+.thank-you p {
+    color: var(--Orange);
+    font-weight: 300;
+    font-size: 14px;
+    background-color: var(--Light-Grey);
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-bottom: 30px;
+}
+
+.thank-you h3 {
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.thank-you h4 {
+    color: hsl(217, 12%, 63%);
+    text-align: center;
+    font-weight: 300;
+}
+
+@media (max-width:1024px) {
+    .container {
+        max-width: 290px;
+    }
+
+    .container .before label {
+        width: 40px;
+        height: 40px;
+    }
+}
